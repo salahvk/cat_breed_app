@@ -65,6 +65,13 @@ class _CatBreedDetailScreenState extends State<CatBreedDetailScreen> {
                                 color: ColorManager.textColor,
                               );
                             },
+                            loadingBuilder: (p0, p1) {
+                              return Container(
+                                height: size.height,
+                                width: size.width,
+                                color: ColorManager.lightBlue,
+                              );
+                            },
                             height: size.height,
                             width: size.width,
                             fit: BoxFit.cover),

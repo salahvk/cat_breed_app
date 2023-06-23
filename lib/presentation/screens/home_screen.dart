@@ -19,6 +19,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     final provider = Provider.of<DataProvider>(context, listen: false);
+    final size = MediaQuery.of(context).size;
     final List<Widget> imageSliders = provider.catImages!
         .map((item) => Container(
               margin: const EdgeInsets.all(5.0),
@@ -29,13 +30,19 @@ class _HomeScreenState extends State<HomeScreen> {
                       FastCachedImage(
                           url: item.url ?? '',
                           fit: BoxFit.cover,
+                          loadingBuilder: (p0, p1) {
+                            return Container(
+                              height: 250,
+                              width: size.width,
+                              color: ColorManager.lightBlue,
+                            );
+                          },
                           width: 1000.0),
                     ],
                   )),
             ))
         .toList();
 
-    final size = MediaQuery.of(context).size;
     return Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(

@@ -30,6 +30,13 @@ class _CatImageScreenState extends State<CatImageScreen> {
                       FastCachedImage(
                           url: item.url ?? '',
                           fit: BoxFit.cover,
+                          loadingBuilder: (p0, p1) {
+                            return Container(
+                              height: 250,
+                              width: size.width,
+                              color: ColorManager.lightBlue,
+                            );
+                          },
                           width: 1000.0),
                     ],
                   )),
@@ -52,6 +59,13 @@ class _CatImageScreenState extends State<CatImageScreen> {
                       height: size.height,
                       width: size.width,
                       color: ColorManager.textColor,
+                    );
+                  },
+                  loadingBuilder: (p0, p1) {
+                    return Container(
+                      height: size.height,
+                      width: size.width,
+                      color: ColorManager.lightBlue,
                     );
                   },
                   height: size.height,
