@@ -44,7 +44,7 @@ class _HomeScreenState extends State<HomeScreen> {
               Padding(
                 padding: const EdgeInsets.only(top: 5, bottom: 5),
                 child: Text(
-                  "Cat Breed App",
+                  "Cat Brochure App",
                   style: getSemiBoldtStyle(
                       color: ColorManager.textColor, fontSize: 25),
                 ),

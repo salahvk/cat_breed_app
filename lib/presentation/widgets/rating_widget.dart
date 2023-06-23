@@ -33,9 +33,7 @@ class RatingDetail extends StatelessWidget {
               Icons.star,
               color: Colors.amber,
             ),
-            onRatingUpdate: (rating) {
-              print(rating);
-            },
+            onRatingUpdate: (rating) {},
           ),
         ],
       ),

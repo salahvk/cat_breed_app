@@ -42,7 +42,7 @@ class _SplashScreenState extends State<SplashScreen> {
             Padding(
               padding: const EdgeInsets.only(top: 500),
               child: Text(
-                "Cat Breed App",
+                "Cat Brochure App",
                 style: getSemiBoldtStyle(
                     fontSize: 20, color: ColorManager.textColor),
               ),
